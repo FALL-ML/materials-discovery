@@ -1,0 +1,82 @@
+&CONTROL
+! .control.settings.
+calculation               = 'scf',
+restart_mode              = 'from_scratch',
+prefix                    = 'pwscf',
+pseudo_dir                = '/central/groups/SeeGroup/qe_pseudopotentials/',
+
+! .control.io.
+outdir                    = '.',
+verbosity                 = 'low',
+
+! .control.ion_relax.
+tprnfor                   = .true.,
+tstress                   = .true.,
+forc_conv_thr             = 0.001,
+etot_conv_thr             = 0.0001,
+nstep                     = 100,
+/
+
+&SYSTEM
+! .system.structure.
+ibrav                     = 0,
+a                         = 1.0,
+nat                       = 10,
+ntyp                      = 3,
+
+! .system.ecut.
+ecutwfc                   = 160,
+ecutrho                   = 800,
+
+! .system.occupations.
+occupations               = 'smearing',
+smearing                  = 'fd',
+degauss                   = 0.007,
+/
+
+&ELECTRONS
+! .electrons.
+diagonalization           = 'david',
+conv_thr                  = 1e-08,
+electron_maxstep          = 100,
+mixing_mode               = 'plain',
+mixing_beta               = 0.4,
+/
+
+&IONS
+! .ions.
+ion_dynamics              = 'bfgs',
+wfc_extrapolation         = 'none',
+pot_extrapolation         = 'none',
+/
+
+&CEll
+! .cell.
+cell_dynamics             = 'bfgs',
+press                     = '0.0',
+press_conv_thr            = '0.5',
+/
+
+ATOMIC_SPECIES
+   Li   6.9410 Li.pbe-s-kjpaw_psl.1.0.0.UPF
+   Er 167.2590 Er.pbe-spdn-kjpaw_psl.1.0.0.UPF
+   Br  79.9040 Br.pbe-dn-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS  crystal 
+ Li     0.67022000000000     0.32978000000000     0.00000000000000   1   1   1
+ Li     0.33186800000000     0.66813200000000     0.00000000000000   1   1   1
+ Li     0.84288500000000     0.15711500000000     0.50000000000000   1   1   1
+ Er     0.00245400000000     0.99754600000000     0.00000000000000   1   1   1
+ Br     0.41932600000000     0.07917200000000     0.76723000000000   1   1   1
+ Br     0.06863000000000     0.39957100000000     0.75345200000000   1   1   1
+ Br     0.60042900000000     0.93137000000000     0.24654800000000   1   1   1
+ Br     0.92082800000000     0.58067400000000     0.23277000000000   1   1   1
+ Br     0.74232700000000     0.75396800000000     0.76127500000000   1   1   1
+ Br     0.24603200000000     0.25767300000000     0.23872500000000   1   1   1
+CELL_PARAMETERS
+    6.93752785000000     0.00000000000000     0.00000000000000
+   -3.43887165540857     6.02523480099765     0.00000000000000
+    1.16735911490656     2.01037551939802     6.53764300241152
+
+K_POINTS automatic
+   4    2    4   0   0   0

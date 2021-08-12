@@ -1,0 +1,42 @@
+# generated using pymatgen
+data_Li3ErBr6
+_symmetry_space_group_name_H-M   C2
+_cell_length_a   6.94555319
+_cell_length_b   11.95390362
+_cell_length_c   6.95114156
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   109.18796438
+_cell_angle_gamma   90.00000000
+_symmetry_Int_Tables_number   5
+_chemical_formula_structural   Li3ErBr6
+_chemical_formula_sum   'Li6 Er2 Br12'
+_cell_volume   545.06663020
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+  2  '-x, y, -z'
+  3  'x+1/2, y+1/2, z'
+  4  '-x+1/2, y+1/2, -z'
+loop_
+ _atom_type_symbol
+ _atom_type_oxidation_number
+  Li+  1.0
+  Er3+  3.0
+  Br-  -1.0
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Li+  Li0  2  0.00000000  0.15211230  0.50000000  1.0
+  Li+  Li1  2  0.00000000  0.32469414  0.00000000  1.0
+  Li+  Li2  2  0.00000000  0.67061715  0.00000000  1.0
+  Er3+  Er3  2  0.00000000  0.99852038  0.00000000  1.0
+  Br-  Br4  4  0.22971809  0.16543337  0.24961156  1.0
+  Br-  Br5  4  0.24580037  0.50854032  0.23464021  1.0
+  Br-  Br6  4  0.24731904  0.83055484  0.22664715  1.0

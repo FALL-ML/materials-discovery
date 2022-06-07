@@ -3,14 +3,14 @@
 # materials-discovery
 Semi-supervised learning code + CAVD + BVSE + QE-NEB for identifying prospective ion conductors.
 
-<p><b>Overview: Semi-supervised Learning.</b> The semi-superivsed learning pipeline is split into six sub steps which are documented sequentially in the following notebooks:</p>
+<p><b>Overview: Semi-supervised Learning.</b> The semi-supervised learning pipeline is split into six sub steps which are documented sequentially in the following notebooks:</p>
 
-1. Step1_Data_Pull_and_Clean.inyb
-2. Step2_Labeled_Data.inyb
-3. Step3_Feature_Generator.inyb
-4. Step4_Feature_Merge.inyb
-5. Step5_Agglomerative_Clustering.inyb
-6. Step6_Comparing_Models.inyb
+1. <b>Step1_Data_Pull_and_Clean.inyb</b>: Pulls data from Materials Project and the ICSD folder. Merges structures that are contained in both databases. Charge decoration is applied to structures for enhanced compbatility with the descriptor transformations. Structure simplifications are applied. 
+2. <b>Step2_Labeling_Data.inyb</b>: Pulls in the labels csv and merges them with the structures from step 1.
+3. <b>Step3_Generating_Descriptors.inyb</b>: Applies the descriptor transformations to the structures (or simplified structures). 
+4. <b>Step4_Screening_Descriptors.inyb</b>: Not all structures are compatible with all descriptor transformations. The descriptor space is screened to identify a subset of structures that is compatible with all descriptors. 
+5. <b>Step5_Agglomerative_Clustering.inyb</b>: Agglomerative clustering is applied to the descriptor space. The resulting sets of 2-300 clusters are labeled with the room temperature ionic conductivity data. The Ward variance is calculated for the conductivity labels. 
+6. <b>Step6_Comparing_Models.inyb</b>: Code to visualize and compare each agglomerative clustering model. 
 
 <p><b>Overview: CAVD+BVSE+NEB.</b> To expedite Nudged Elastic Band (NEB) calculations in Quantum Espresso, initials pathways were guessed by using Crystal Analysis by Voronoi Decomposition (CAVD) and Bond Valence Site Energy (BVSE) calculations. The notebook working_cavd_bvse_neb.inyb documents the entire process, all the way through performing an NEB calculation in Quantum Espresso. Qualitatively, the following steps are performed:</p>
 

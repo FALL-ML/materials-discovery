@@ -3,9 +3,16 @@
 # materials-discovery
 Semi-supervised learning code + CAVD + BVSE + QE-NEB for identifying prospective ion conductors.
 
-<p><b>Overview: Semi-supervised Learning.</b> Not yet added. 
+<p><b>Overview: Semi-supervised Learning.</b> The semi-superivsed learning pipeline is split into six sub steps which are documented sequentially in the following notebooks:</p>
 
-<p><b>Overview: CAVD+BVSE+NEB.</b> To expedite Nudged Elastic Band (NEB) calculations in Quantum Espresso, initials pathways were guessed by using Crystal Analysis by Voronoi Decomposition (CAVD) and Bond Valence Site Energy (BVSE) calculations. This notebook documents the entire process, all the way through performing an NEB calculation in Quantum Espresso. Qualitatively, the following steps are performed:</p>
+1. Step1_Data_Pull_and_Clean.inyb
+2. Step2_Labeled_Data.inyb
+3. Step3_Feature_Generator.inyb
+4. Step4_Feature_Merge.inyb
+5. Step5_Agglomerative_Clustering.inyb
+6. Step6_Comparing_Models.inyb
+
+<p><b>Overview: CAVD+BVSE+NEB.</b> To expedite Nudged Elastic Band (NEB) calculations in Quantum Espresso, initials pathways were guessed by using Crystal Analysis by Voronoi Decomposition (CAVD) and Bond Valence Site Energy (BVSE) calculations. The notebook working_cavd_bvse_neb.inyb documents the entire process, all the way through performing an NEB calculation in Quantum Espresso. Qualitatively, the following steps are performed:</p>
 
 1. Check that an input structure is ordered. Otherwise order it. 
 2. Determine suitable hyperparamters by running self-consistent field (SCF) calculations on the input structure.
